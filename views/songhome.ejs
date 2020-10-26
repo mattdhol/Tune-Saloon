@@ -1,0 +1,29 @@
+<%- include('partials/navbar') %>
+
+<h1>Song Home</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Workbook</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Appeal</th>
+            <th>Difficulty</th>
+            <th>Video Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% allsongs.forEach(function(g) { %>
+            <tr>
+                <td> <a href="/<%=g._id%>"> Song Workbook</a> </td>
+                <td><%= g.songTitle %></td>
+                <td><%= g.songArtist %></td>
+                <td><%= g.appeal %></td>
+                <td><%= g.difficulty %></td>
+                <td><%= g.videoLink %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<%- include('partials/footer') %>

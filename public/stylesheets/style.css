@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+  font-family: 'KickingHorse';
+  font-size: large;
+}
+
+@font-face{
+  font-family: 'KickingHorse';
+  src: url(../font/KickingHorse-WornExtra.ttf);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  background:#FC6C02;
+  margin: 0; 
+  padding: 10px;
+  padding-bottom: 30px;
+}
+table{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+a {
+  color: #00B7FF;
+}
+
+.cat {
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
+}
+
+.navbar-brand{
+  padding-left:30px;
+  padding-right:30px;
+  /* font-family: 'Roboto'; */
+}
+
+.nav-item{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+html, body, header, #intro {
+  height: 100%;
+}
+#intro {
+  background: url("images/saloon.jpg")no-repeat center; 
+}
+.list-group {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
+}
+.addwrapper {
+  font-family: 'Roboto';
+  max-width: 550px;
+  position: center;
+  background:#FC6C02;
+  padding: 30px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  border-radius: 25px;
+  border-color: #343B40;
+  border-style: solid;
+  box-shadow: 0, 0, 30px;
+  font-size: 25px;
+  opacity: 1;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'KickingHorse';
+}
+
+.addbackground{
+  background-color: lightgrey;
+  height: 100%;
+}
+
+/* body {
+  /* background-image: url(../images/moroccan-flower.png);
+  background-image: url(../images/saloon.jpg) */
+  /* background-color:#FFFFFF;
+  background-image: images/saloon; */
+/* }  */
+*
+.form-control {
+  border-style: solid;
+  border-color: white;
+}
+.intropage{
+  background-image: url(../images/saloon.jpg);
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title></title>
+</head>
+<body>
+    <nav class="navbar navbar sticky-top navbar-expand-lg navbar-white bg-dark">
+        <div class="logo-image">
+           <img class="cat" src="../images/bug.jpg" class="img-fluid"> <br>
+      </div>
+        <a style="color: #FC6C02" class="navbar-brand" href="/"> Tune Saloon</a>
+
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a style="color: #FC6C02" class="nav-link" href="/songhome">Song Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a style="color: #FC6C02" class="nav-link" href="/songadd">Add Song</a>
+              </li>
+            <li class="nav-item">
+              <a style="color: #FC6C02" class="nav-link" href="/practice/practicehome">Practice Home</a>
+            </li>
+            <li class="topnav-right">
+              <a style="color: #FC6C02" class="nav-link" href="/practice/practiceadd">Practice Add</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+     <div class="addbackground">
+
+<h1>Practice Add</h1>
+<div class="addwrapper">
+    <form action="practiceadd" method="POST" style= "width: 200px; margin: auto">
+        <label> Primary Chord:
+            <select class="form-control" name= "primaryChord" style= "width: 200px; margin: auto">
+                <option value="A">A</option>
+                <option value="Amaj7">Amaj7</option>
+                <option value="A7">A7</option>
+                <option value="Am">Am</option>
+                <option value="Am7">Am7</option>
+                <option value="B">B</option>
+                <option value="Bmaj7">Bmaj7</option>
+                <option value="B7">B7</option>
+                <option value="Bm">Bm</option>
+                <option value="Bm7">Bm7</option>
+                <option value="C">C</option>
+                <option value="Cmaj7">Cmaj7</option>
+                <option value="C7">C7</option>
+                <option value="Cm">Cm</option>
+                <option value="Cm7">Cm7</option>
+                <option value="D">D</option>
+                <option value="Dmaj7">Dmaj7</option>
+                <option value="D7">D7</option>
+                <option value="Dm">Dm</option>
+                <option value="Dm7">Dm7</option>
+                <option value="E">E</option>
+                <option value="Emaj7">Emaj7</option>
+                <option value="E7">E7</option>
+                <option value="Em">Em</option>
+                <option value="Em7">Em7</option>
+                <option value="F">F</option>
+                <option value="Fmaj7">Fmaj7</option>
+                <option value="F7">F7</option>
+                <option value="Fm">Fm</option>
+                <option value="Fm7">Fm7</option>
+            </select>
+            <label> Secondary Chord:
+                <select class="form-control" name= "secondaryChord" style= "width: 200px; margin: auto">
+                    <option value="A">A</option>
+                    <option value="Amaj7">Amaj7</option>
+                    <option value="A7">A7</option>
+                    <option value="Am">Am</option>
+                    <option value="Am7">Am7</option>
+                    <option value="B">B</option>
+                    <option value="Bmaj7">Bmaj7</option>
+                    <option value="B7">B7</option>
+                    <option value="Bm">Bm</option>
+                    <option value="Bm7">Bm7</option>
+                    <option value="C">C</option>
+                    <option value="Cmaj7">Cmaj7</option>
+                    <option value="C7">C7</option>
+                    <option value="Cm">Cm</option>
+                    <option value="Cm7">Cm7</option>
+                    <option value="D">D</option>
+                    <option value="Dmaj7">Dmaj7</option>
+                    <option value="D7">D7</option>
+                    <option value="Dm">Dm</option>
+                    <option value="Dm7">Dm7</option>
+                    <option value="E">E</option>
+                    <option value="Emaj7">Emaj7</option>
+                    <option value="E7">E7</option>
+                    <option value="Em">Em</option>
+                    <option value="Em7">Em7</option>
+                    <option value="F">F</option>
+                    <option value="Fmaj7">Fmaj7</option>
+                    <option value="F7">F7</option>
+                    <option value="Fm">Fm</option>
+                    <option value="Fm7">Fm7</option>
+                </select>
+            </label>
+        <input type="submit" value="Chord Add" class="btn btn-outline-primary btn-lg">
+    </form>
+</div>
+</div>
+</main>
+</body>
+</html>

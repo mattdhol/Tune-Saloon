@@ -1,0 +1,38 @@
+<div class="addbackground">
+<%- include('partials/navbar') %>
+<h1>Add Song</h1>
+
+<div class="addwrapper">
+<form action="songadd" method="POST" style= "width: 200px; margin: auto">
+ <label> Song Title:
+    <input class="form-control" type="text" name= "songTitle" placeholder=" Song Title">
+ </label>
+ <label> Song Artist:
+    <input class="form-control" type="text" name= "songArtist" placeholder=" Song Artist">
+ </label>
+ <label> Appeal:
+    <select class="form-control" name= "appeal" style= "width: 200px; margin: auto">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</label>
+<label> Difficulty:
+    <select class="form-control" name= "difficulty" style= "width: 200px; margin: auto" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</label>
+<label> Video Link:
+    <input class="form-control" type="text" name= "videoLink" placeholder="Insert Video"style= "width: 200px; margin: auto">
+ </label>
+ <input type="submit" value="Add Song" class="btn btn-outline-primary btn-lg">
+</form>
+</div>
+</div>
+<%- include('partials/footer') %>
