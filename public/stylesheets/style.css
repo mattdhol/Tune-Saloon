@@ -4,12 +4,10 @@
   font-family: 'KickingHorse';
   font-size: large;
 }
-
 @font-face{
   font-family: 'KickingHorse';
   src: url(../font/KickingHorse-WornExtra.ttf);
 }
-
 h1, h2, h3 {
   text-align: center;
   background:#FC6C02;
@@ -22,29 +20,31 @@ table{
   margin-left: auto;
   margin-right: auto;
   }
-
+form{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+}
 a {
   color: #00B7FF;
 }
-
 .cat {
   height: auto;
   width: auto;
   max-height: 72px;
   max-width: 250px;
 }
-
 .navbar-brand{
   padding-left:30px;
   padding-right:30px;
-  /* font-family: 'Roboto'; */
 }
-
 .nav-item{
   padding-left:10px;
   padding-right:10px;
 }
-
 html, body, header, #intro {
   height: 100%;
 }
@@ -58,7 +58,6 @@ html, body, header, #intro {
   font-size: 22px;
 }
 .addwrapper {
-  font-family: 'Roboto';
   max-width: 550px;
   position: center;
   background:#FC6C02;
@@ -77,30 +76,27 @@ html, body, header, #intro {
   text-align: center;
   font-family: 'KickingHorse';
 }
-
 .addbackground{
   background-color: lightgrey;
   height: 100%;
 }
-
-/* body {
-  /* background-image: url(../images/moroccan-flower.png);
-  background-image: url(../images/saloon.jpg) */
-  /* background-color:#FFFFFF;
-  background-image: images/saloon; */
-/* }  */
-*
 .form-control {
   border-style: solid;
   border-color: white;
 }
 .intropage{
+  display: block;
   background-image: url(../images/saloon.jpg);
-  height: 90%;
+  height: 115%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
-
-
-
+h4 {
+  text-align: center;
+  padding: 25px;
+}
+.introclick {
+  display: block;
+}

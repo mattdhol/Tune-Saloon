@@ -1,0 +1,50 @@
+<%- include('../partials/navbar') %>
+
+
+<h1><%= chordId.primaryChord%> - <%=chordId.secondaryChord%></h1>
+
+<form action= "/practice/<%=chordId._id%>" id= "add-progress-form" method="POST">
+    <label>Number of Transitions</label>
+    <input class="form-control" type="number" name= "numberOfTransitions" placeholder="0" style= "width: 600px; margin: auto">
+    </label>
+
+    <label>Note
+    <input class="form-control" type="text" name= "note" placeholder="Write Something Here" style= "width: 600px; margin: auto">
+    </label>
+    <br>
+    <input type="submit" value="Practice Add" class="btn btn-outline-primary btn-lg">
+    </form>
+    <br>
+
+
+    
+    <div>
+      <span id="timer">
+        <span id="time">10</span>Seconds      
+      </span>
+
+
+
+<% if (chordId.transitions.length) { %>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Total Transitions</th>
+        <th>Note</th>
+        <th>Time Stamp</th>
+      </tr>
+    </thead>
+    <tbody>
+  <% chordId.transitions.forEach(function(t) { %>
+    <tr>
+        <td><%= t.numberOfTransitions %></td>
+        <td><%= t.note %></td>
+        <td><%= t.createdAt %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+<% } else { %>
+<h3>No Transitions Yet</h3>
+<% } %>
+<%- include('../partials/footer') %>

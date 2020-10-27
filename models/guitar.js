@@ -6,13 +6,20 @@ note: {
     type: String,
   },
 mastered: {
-    type: Boolean, 
+    type: String, 
+    enum: ['False', 'True'],
     default: 'False',
-  },
-time: { 
-    type : Date, default: Date.now 
-    }
+  }, 
+  currentSong: {
+    type: String,
+    enum: ['False', 'True'],
+    default: 'False',
+    },
+}, 
+  {
+timestamps: true 
 })
+
 
 const guitarSchema = new Schema({
     songTitle: {
@@ -34,6 +41,9 @@ const guitarSchema = new Schema({
         default: '1',
     },
     videoLink: {
+        type: String,
+    },
+    guitarTab: {
         type: String,
     },
     lesson:[lessonSchema]

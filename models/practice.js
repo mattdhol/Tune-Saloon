@@ -8,10 +8,10 @@ const transitionsSchema = new Schema({
       note: {
         type: String,
       },
-      time: { 
-        type : Date, default: Date.now 
-        },
-})
+    }, 
+      {
+    timestamps: true 
+  })
 
 const practiceSchema = new Schema({
     primaryChord: {

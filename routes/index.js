@@ -13,5 +13,7 @@ router.post('/songadd', guitarCtrl.song_create)
 router.get('/:id', guitarCtrl.song_progress)
 router.post('/:id', guitarCtrl.song_lesson)
 
+router.get('/master', guitarCtrl.master)
 
+router.delete('/delete/:id', guitarCtrl.song_delete)
 module.exports = router;

@@ -6,12 +6,60 @@
 
     <li class="list-group-item list-group-item-success">Appeal: <%= songId.appeal  %> </li>
     <li class="list-group-item list-group-item-danger">Difficulty: <%= songId.difficulty  %> </li>
-    <li class="list-group-item list-group-item-info">Video Link: <%= songId.videoLink  %> </li>
+    <li class="list-group-item list-group-item-info">Video Link: <a href = "<%=songId.videoLink%>"> Video </a> </li>
+    <li class="list-group-item list-group-item-warning">Guitar Tab Link : <a href = "<%=songId.guitarTab%>"> Guitar Tab </a> </li>
+
 </ul>
 
-<h4>Song Progress</h4>
+<h4>------  Song Progress  ------</h4>
 
+<form action= "/<%=songId._id%>" id= "add-progress-form" method="POST">
+    <label>*Current Song?
+        <select class="form-control" name= "currentSong" style= "width: 200px; margin: auto">
+            <option value="False">False</option>
+            <option value="True">True</option>
+        </select>
+    </label>
+    <br>
+</label>
+<label>Mastered?
+    <select class="form-control" name= "mastered" style= "width: 200px; margin: auto">
+        <option value="False">False</option>
+        <option value="True">True</option>
+    </select>
+</label>
 
-
+<input class="form-control" type="text" name= "note" placeholder="Note: Write Something Here" style= "width: 600px; margin: auto">
+<br>
+<input type="submit" value="Progress Add" class="btn btn-outline-primary btn-lg">
+</form>
+<br>
+<% if (songId.lesson.length) { %>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Current Song</th>
+        <th>Note</th>
+        <th>Mastered</th>
+        <th>Time Stamp</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% songId.lesson.forEach(function(l) { %>
+            <tr>
+                <td><%= l.currentSong %></td>
+              <td><%= l.note %></td>
+              <td><%= l.mastered %></td>
+              <td><%= l.createdAt %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <h3>No Lessons Yet</h3>
+    <% } %>
+        
+    </tbody>
+    </table>
 
 <%- include('partials/footer') %>
