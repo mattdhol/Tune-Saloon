@@ -15,16 +15,16 @@
         </tr>
     </thead>
     <tbody>
-        <% allsongs.forEach(function(g) { %>
+        <% topSong.forEach(function(g) { %>
             <tr>
-                <td> <a href="/<%=g._id%>"> Workbook</a> </td>
+                <td> <a href="/<%=g._id%>"> Song Workbook</a> </td>
                 <td><%= g.songTitle %></td>
                 <td><%= g.songArtist %></td>
                 <td><%= g.appeal %></td>
                 <td><%= g.difficulty %></td>
                 <td> <a href = "<%= g.videoLink%>"> Video </a> </td>
                 <td> <a href = "<%= g.guitarTab%>"> Tab </a> </td>
-                <td><a href="/delete/<%=g._id%>"> Delete</a> </td>
+                <td><form action="/delete/<%=g._id%>?_method=DELETE" class="delete-form" method="POST">  <button class="delete" type= "submit">Delete </button> </form>  </td>
             </tr>   
         <% }) %>
     </tbody>

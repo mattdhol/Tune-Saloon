@@ -84,19 +84,26 @@ html, body, header, #intro {
   border-style: solid;
   border-color: white;
 }
-.intropage{
-  display: block;
-  background-image: url(../images/saloon.jpg);
-  height: 120%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
 h4 {
   text-align: center;
   padding: 25px;
 }
 .introclick {
   display: block;
+}
+.delete-form{
+    display: inline-block;
+    margin-right: 10px;
+} 
+.delete-form button {
+  color: red;
+}
+.intropage{
+  display: block;
+  background-image: url(../images/saloon.jpg);
+  height:115%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
 }

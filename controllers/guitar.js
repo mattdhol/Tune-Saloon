@@ -1,15 +1,30 @@
 const Guitar = require('../models/guitar')
 
-
 function intro_page(req, res){
     res.render('intropage')
 }
 
 function song_home(req, res){
     Guitar.find({}, function(err, allsongs) {
-    res.render('songhome', {allsongs})
+        // console.log(allsongs[0].lesson[allsongs[0].lesson.length - 1].currentSong)
+        let topSong = []
+        allsongs.forEach(function (song){
+            console.log(song.lesson.length - 1)
+        if (song.lesson[song.lesson.length - 1].currentSong == 'True'){
+            topSong.unshift(song)
+        } else {
+            topSong.push(song)
+        }
+
+        })
+
+
+
+    res.render('songhome', {topSong})
 })
 }
+
+
 function song_add(req, res){
     res.render('songadd')
 }
@@ -44,10 +59,14 @@ function master(req, res){
 }
 
 function song_delete (req, res){
-    Guitar.findByIdAndDelete(req.params, function(err, deleteId){
+    Guitar.findByIdAndDelete(req.params.id, function(err, deleteId){
         res.redirect('/songhome');
     })
 }
+
+// 1 -for each guitar schema object... what is the current song property of the most recent addition to the lesson array. 
+// 2- if the most recent addition is != true, then it no longer is at the top of the array
+// 3- 
 
 
 module.exports= {
