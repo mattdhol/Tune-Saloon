@@ -87,7 +87,7 @@ html, body, header, #intro {
 .intropage{
   display: block;
   background-image: url(../images/saloon.jpg);
-  height: 115%;
+  height: 120%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
