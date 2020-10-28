@@ -107,3 +107,22 @@ h4 {
   background-size: cover;
   cursor: pointer;
 }
+.delete{
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  font-size: 22px
+}
+.delete:hover {
+  background-color: red; 
+  color: white;
+}
+.go {
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  font-size: 22px;
+  color: green;
+}
+.go:hover {
+  background-color: green; 
+  color: white;
+}

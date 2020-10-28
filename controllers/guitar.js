@@ -6,24 +6,23 @@ function intro_page(req, res){
 
 function song_home(req, res){
     Guitar.find({}, function(err, allsongs) {
-        // console.log(allsongs[0].lesson[allsongs[0].lesson.length - 1].currentSong)
-        let topSong = []
-        allsongs.forEach(function (song){
-            console.log(song.lesson.length - 1)
-        if (song.lesson[song.lesson.length - 1].currentSong == 'True'){
-            topSong.unshift(song)
-        } else {
-            topSong.push(song)
-        }
-
+        allsongs.forEach(function (song, songidx){
+            song.lesson.forEach(function(l){
+                if (l.currentSong == 'True') {
+                allsongs.splice(songidx, 1);
+                allsongs.unshift(song)
+                } else {
+                (l.currentSong == 'False')
+                allsongs.splice(songidx, 1)
+                allsongs.push(song)       
+                
+                }
+            })
         })
-
-
-
-    res.render('songhome', {topSong})
-})
+        console.log(allsongs)
+    res.render('songhome', {allsongs})
+    })
 }
-
 
 function song_add(req, res){
     res.render('songadd')
