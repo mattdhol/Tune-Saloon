@@ -48,9 +48,6 @@ a {
 html, body, header, #intro {
   height: 100%;
 }
-#intro {
-  background: url("images/saloon.jpg")no-repeat center; 
-}
 .list-group {
   text-align: center;
   margin-left: auto;
@@ -101,7 +98,7 @@ h4 {
 .intropage{
   display: block;
   background-image: url(../images/saloon.jpg);
-  height:115%;
+  height:108%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,3 +123,18 @@ h4 {
   background-color: green; 
   color: white;
 }
+.cat{
+  max-width:100%;
+  height:auto;
+}
+.tweet{
+  display: block;
+  background-image: url(../images/crop.jpg);
+  height: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+

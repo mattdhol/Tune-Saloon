@@ -11,7 +11,6 @@
             <th>Difficulty</th>
             <th>Video Link</th>
             <th> Guitar Tab </th>
-            <th> Delete Song</th>
         </tr>
     </thead>
     <tbody>
@@ -24,9 +23,6 @@
                 <td><%= g.difficulty %></td>
                 <td> <a href = "<%= g.videoLink%>" onclick="window.open(this.href); return false;"> <button class="go" type= "submit">Video </button></a> </td>
                 <td> <a href = "<%= g.guitarTab%>" onclick="window.open(this.href); return false;"> <button class="go" type= "submit">Tab </button> </a> </td>
-                <td><form action="/delete/<%=g._id%>?_method=DELETE"; class="delete-form" method="POST">  <button class="delete" type= "submit">Delete </button> </form>  </td>
-              
-
             </tr>   
         <% }) %>
     </tbody>

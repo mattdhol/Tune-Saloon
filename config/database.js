@@ -1,20 +1,13 @@
 const mongoose = require('mongoose');
 
-// mongoose.connect(process.env.DATABASE_URL, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useCreateIndex: true
-// });
-
-mongoose.connect('mongodb+srv://Matt:@DutchBoi1@matt.jkqei.mongodb.net/Matt?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
 });
 
-
 const db = mongoose.connection;
 
 db.on('connected', function() {
     console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
-  });
+});

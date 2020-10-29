@@ -8,7 +8,7 @@
     <li class="list-group-item list-group-item-danger">Difficulty: <%= songId.difficulty  %> </li>
     <li class="list-group-item list-group-item-info">Video Link: <a href = "<%=songId.videoLink%>" onclick="window.open(this.href); return false;"> <button class="go" type= "submit">Video </button></a> </li>
     <li class="list-group-item list-group-item-warning">Guitar Tab Link : <a href = "<%=songId.guitarTab%>" onclick="window.open(this.href); return false;">  <button class="go" type= "submit">Tab </button> </a> </li>
-
+<li>   <form action="/delete/<%=songId._id%>?_method=DELETE"; class="delete-form" method="POST"> Bittersweet, time to: <button class="delete" type= "submit">Delete </button> </form>  </li>
 </ul>
 
 <h4>------  Song Progress  ------</h4>
