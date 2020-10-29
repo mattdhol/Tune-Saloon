@@ -46,8 +46,8 @@ function song_lesson(req, res){
     })
 }
 
-function master(req, res){
-    res.render('master')
+function rejected(req, res){
+    res.render('rejected')
 }
 
 function song_delete (req, res){
@@ -64,5 +64,5 @@ module.exports= {
     intro_page,
     song_lesson,
     song_delete,
-    master,
+    rejected,
 }
