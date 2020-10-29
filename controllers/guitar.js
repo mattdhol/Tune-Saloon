@@ -5,11 +5,11 @@ function intro_page(req, res){
 }
 
 function song_home(req, res){
-    Guitar.find({}, function(err, allsongs) {
-    res.render('songhome', {
-        allsongs,
-        user: req.user,     
-    })
+    Guitar.find({}).sort({ songTitle: 1, songArtist: 1 }).exec(function(err, allsongs) {
+        res.render('songhome', {
+            allsongs,
+             user: req.user, 
+        })
     })
 }
 
@@ -21,7 +21,6 @@ function song_add(req, res){
 
 function song_create(req, res){
     const guitar = new Guitar(req.body)
-    // console.log(guitar)
     guitar.save(function(err){
         if (err) return res.send("this is the error" + (err))
         res.redirect('/songhome')
@@ -30,10 +29,10 @@ function song_create(req, res){
 
 function song_progress(req, res){
     Guitar.findById(req.params.id, function (err, songId){
-    res.render("songprogress", {
+        res.render("songprogress", {
         songId,
         user: req.user,     
-    })
+        })
     })
 }
 
