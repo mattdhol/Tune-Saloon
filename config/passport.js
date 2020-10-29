@@ -5,7 +5,7 @@ const Login = require('../models/login');
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK
+    callbackURL: process.env.GOOGLE_CALLBACK,
   },
   function(accessToken, refreshToken, profile, cb) {
     Login.findOne({ 'googleId': profile.id }, function(err, login) {
