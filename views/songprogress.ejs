@@ -22,12 +22,12 @@
     </label>
     <br>
 </label>
-<label>Mastered?
+<!-- <label>Mastered?
     <select class="form-control" name= "mastered" style= "width: 200px; margin: auto">
         <option value="False">False</option>
         <option value="True">True</option>
     </select>
-</label>
+</label> -->
 
 <input class="form-control" type="text" name= "note" placeholder="Note: Write Something Here" style= "width: 600px; margin: auto">
 <br>
@@ -40,7 +40,7 @@
       <tr>
         <th>Current Song</th>
         <th>Note</th>
-        <th>Mastered</th>
+        <!-- <th>Mastered</th> -->
         <th>Time Stamp</th>
       </tr>
     </thead>
@@ -48,8 +48,7 @@
         <% songId.lesson.forEach(function(l) { %>
             <tr>
             <td><%= l.currentSong %></td>
-              <td><%= l.note %></td>
-              <td><%= l.mastered %></td>
+              <td><%= l.note %></td> -->
               <td><%= l.createdAt %></td>
             </tr>
           <% }); %>
