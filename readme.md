@@ -10,3 +10,4 @@ Trello Board URL:
 https://trello.com/b/equEbEYR/unit-2-final-project
 
 
+![Image of Yaktocat](https://github.com/mattdhol/Tune-Saloon/blob/master/public/images/readme%20images/addsong.png)
