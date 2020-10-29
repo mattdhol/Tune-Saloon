@@ -10,3 +10,4 @@ Trello Board URL:
 https://trello.com/b/equEbEYR/unit-2-final-project
 
 
+![Image of Yaktocat](https://git.generalassemb.ly/mattdhol/Project-1---Matching-Game/blob/master/images/MatchScreenshot.png)
