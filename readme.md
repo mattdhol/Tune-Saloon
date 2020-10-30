@@ -9,7 +9,7 @@ https://tune-saloon.herokuapp.com/
 Trello Board URL:
 https://trello.com/b/equEbEYR/unit-2-final-project
 
-Tech used: Bootstrap, 
+Tech used: NodeJS, Express, MongoDB, Mongoose, Bootstrap, Oauth, Heroku, Atlas, HTML, CSS, Javascript.
 
 Next Steps: 60 sec timer, api for tab sheets, *seperate database for logged in users.
 

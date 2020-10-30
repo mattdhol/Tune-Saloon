@@ -36,7 +36,6 @@ function song_progress(req, res){
     })
 }
 
-
 function song_lesson(req, res){
     Guitar.findById(req.params.id, function(err, songId){
         songId.lesson.push(req.body)
