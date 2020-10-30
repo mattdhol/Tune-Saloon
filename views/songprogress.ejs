@@ -14,12 +14,6 @@
 <h4>------  Song Progress  ------</h4>
 
 <form action= "/<%=songId._id%>" id= "add-progress-form" method="POST">
-    <label>*Current Song?
-        <select class="form-control" name= "currentSong" style= "width: 200px; margin: auto">
-            <option value="False">False</option>
-            <option value="True">True</option>
-        </select>
-    </label>
     <br>
 </label>
 <label>Mastered?
@@ -38,7 +32,6 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th>Current Song</th>
         <th>Note</th>
         <th>Mastered</th>
         <th>Time Stamp</th>
@@ -47,7 +40,6 @@
     <tbody>
         <% songId.lesson.forEach(function(l) { %>
             <tr>
-            <td><%= l.currentSong %></td>
               <td><%= l.note %></td>
               <td><%= l.mastered %></td>
               <td><%= l.createdAt %></td>
