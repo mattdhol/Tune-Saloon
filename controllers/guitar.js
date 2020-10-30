@@ -6,10 +6,9 @@ function intro_page(req, res){
 
 function song_home(req, res){
     Guitar.find({}).sort({ songTitle: 1, songArtist: 1 }).exec(function(err, allsongs) {
-        console.log(allsongs)
         res.render('songhome', {
             allsongs,
-             user: req.user, 
+            user: req.user, 
         })
     })
 }
