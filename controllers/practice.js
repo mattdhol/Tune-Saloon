@@ -33,7 +33,6 @@ function practice_progress(req, res){
     })
 }
 
-
 function chord_add_post_req(req, res){
     Practice.findById(req.params.id, function (err, chordId){
         chordId.transitions.push(req.body)

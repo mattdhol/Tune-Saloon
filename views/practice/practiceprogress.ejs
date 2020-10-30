@@ -30,7 +30,7 @@
     <tr>
         <td><%= t.numberOfTransitions %></td>
         <td><%= t.note %></td>
-        <td><%= t.createdAt %></td>
+        <td><%= t.createdAt.toLocaleDateString() %></td>
       </tr>
     <% }); %>
   </tbody>

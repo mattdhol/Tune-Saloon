@@ -40,7 +40,7 @@
             <tr>
               <td><%= l.note %></td>
               <td><%= l.mastered %></td>
-              <td><%= l.createdAt %></td>
+              <td><%= l.createdAt.toLocaleDateString() %></td>
             </tr>
           <% }); %>
         </tbody>
