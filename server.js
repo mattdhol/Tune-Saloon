@@ -7,6 +7,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
+var favicon = require('serve-favicon');
 require('./config/database');
 require('./config/passport');
 
@@ -34,6 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
 
 app.use('/', indexRouter);
